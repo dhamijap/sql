@@ -192,4 +192,21 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 ```
 Your thoughts...
+
+What stood out to me is that there was a requirement for people to be labelling the images/words and the researchers always seemed to try to optimize for the most efficient (i.e. high return for low cost) option. This is a problem in that it can potentially lead to some form of abuse since one of the parties in the level will be trying to extract more value compared to the cost and that gets pushed down to the bottom level (i.e. the government tries to extract value from the instituion, the instituion tries to extract value from the head scientist, the head scientist tries to extract value from the graduate student and the scientists (as a group) try to extract value from the data labellers).
+
+If we consider the value of AI now and how much value has been extracted, the workers at the bottom doing the labelling get none of the return on their work. The scientists do get the professional recognition, but the workers do not get anything than their initial payment.  
+
+I think that this somewhat reflects the capitalistic culture and system that the scientists were working within. The scientists are likely required to do as much research as possible with limited funds, and this obviously affects their ability to perform the task. This is pervasive as the workers are also operating in the system and would like to get the highest return for lowest time/effort.
+
+This same attitude also applies for how companies now view LLMs. LLMs are viewed as being able to produce a viable output with the minimal cost and time requirement. However from my understanding, the true costs of these LLMs are not realized for the companies since the LLMs companies often offer a 'free' version and do not necessarily charge the full cost to the companies for their use. This is a buisness strategy of giving a 'sample' or introductory discount. Many of the LLM companies are not yet profitable and continually require more funding from investors to get to the point where customers have replaced their workers. Once the lowest level workers are replaced by LLMs, the companies might see the true cost of LLM use as they will have fewer options for workers.  
+
+Aside from the ethical issues of not getting value from their work, I would imagine that the data collected would be reflecting the minimal correct answer. Since the workers who were able to answer the most questions would get the most payment, then they would likely get more questions over time, and therefore, might have more influence over the data and how it is labelled. That might result in less robust labelling where certain words or images were not labelled with the most wide/descriptive labels, but instead the most common label. Ethically, this might also result in a narrowing of labels to only reflect the most common label. 
+
+
+By using these workers, it also runs into the issue of representive sampling, which is common in psychology studies. This occurs when the sample that is being used is not representive of the overall population. If we only used Princeton students from 1960s as our initial label, then their inherent biases would propogate through the future datasets that used it. This data can be updated over time, but that is something that researchers would have to actively think about and the inital LLMs did have biases that took time to remove. 
+
+
+
+
 ```
