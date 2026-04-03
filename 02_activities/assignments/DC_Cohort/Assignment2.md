@@ -61,9 +61,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 ```
 Your answer...
 
-The first architecture will retain changes to the customer_addresses when customer's change their address. It would include a customer_address_id (unique id for each customer and address pairing), customer_id(identification for each customer), date_id (reference to the date to help find recent vs old addresses), and address (the actual address). This would have each customer's address as a separate line and the customer's would be duplicated in the table. The date and customer_address_id would help to organize what the most recent location is. 
+The first architecture will retain changes to the customer_addresses when customer's change their address. This is known as type 2. It would include: customer_address_id (unique id for each customer and address pairing), customer_id(identification for each customer), date_id (reference to the date to help find recent vs old addresses), and address (the actual address). This would have each customer's address as a separate line and the customer's would be duplicated in the table. The date and customer_address_id would help to organize what the most recent location is. 
 
-The second architecture would have: customer_id (unique identifier - one to one for customer_id table), date_id (date of update), address (current known address). This would mean that each customer gets a single entry in the table. It could also be added to the customer table with a new column of "address" since each customer is unique there. Every time the address is updated, it would be updated in the costumer table. 
+The second architecture would update the customer's address information each time. This is known as type 1. It would include: customer_id (unique identifier - one to one for customer_id table), date_id (date of update), address (current known address). This would mean that each customer gets a single entry in the table. It could also be added to the customer table with a new column of "address" since each customer is unique there. Every time the address is updated, it would be updated in the costumer table. 
 
 ```
 
