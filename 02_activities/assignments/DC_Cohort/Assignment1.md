@@ -208,6 +208,24 @@ Link if you encounter a paywall: https://archive.is/srKHV or https://web.archive
 Consider, for example, concepts of fariness, inequality, social structures, marginalization, intersection of technology and society, etc.
 
 
+
 ```
-Your thoughts...
+Your thoughts...:
+
+The NADRA system from the example is a more obvious (to me, based on my cultural backgrounds and upbringing) example of how the societal expectations may be impacting the way in which data is stored. 
+
+In my current life, many of the systems that I use (driver's liscense, student identification, banking information, voting registration, residential) generally has more flexibility than it did in the past to allow for more options in thigs like gender identity, sex, race etc. In our participant research database at the hospital that I work at, we used a free-form input for race and did not have any distinct input for ethnicity (they were assumed to be the same). We had a similar situation with gender (and not distinguishing it from sex).  
+
+For race/ethnicity, this has lead to a lot of problems with requests for reporting EDI information in our grants and reserach reports. This information had assumed to be the same, but it is not, and we ended up losing details about ethnicity and race. It also can change the way in which our research is understood. If we reported that we recruited 20 particpants that were from China, the the reader might assume that they are ethnically chinese. Separating them lead to more precise details about our particpant population. 
+
+While initially, I thought having a 'free form' input would be ideal since it can capture both answers (about race and ethnicity). However, there are some flaws with this method: 
+
+ 1. A lot of issues where some researchers might consider two different inputs to be the same and others would not (ex. location of birth as Toronto and New York would result in different birth locations for one researcher, but another might  count as them both as 'North American'). This would lead to a a lot of issues with getting the most accurate information. 
+
+ 2. The participants themselves are now required to have the knowledge about differences in ethnicity/race/culture and gender/sex. While it makes sense for people to be able to self-identify since it removes the coder's biases, it then potentially requires a lot more work for the users to correctly input their information. This can be difficult since the granting agencies have defined rules about different categories so as researchers, we can run into issues about trying to align what particpants self-identify and the defintiions that are used by the granding agencies. 
+
+ What we ended up having is a researcher work through the process with the particpant so that they can get all of the background information that they need to best fit into the system defined by the granting agency. Obviously, the granting agency would have limitations and biases as well, so it continues to be a difficult situation to navigate since it 'kicks the can' of the problem upstream to the government to decide instead. 
+
+As coders and researchers, it makes sense that the systems would have to be updatable for the future. 
+
 ```
