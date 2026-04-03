@@ -203,7 +203,6 @@ This same attitude also applies for how companies now view LLMs. LLMs are viewed
 
 Aside from the ethical issues of not getting value from their work, I would imagine that the data collected would be reflecting the minimal correct answer. Since the workers who were able to answer the most questions would get the most payment, then they would likely get more questions over time, and therefore, might have more influence over the data and how it is labelled. That might result in less robust labelling where certain words or images were not labelled with the most wide/descriptive labels, but instead the most common label. Ethically, this might also result in a narrowing of labels to only reflect the most common label. 
 
-
 By using these workers, it also runs into the issue of representive sampling, which is common in psychology studies. This occurs when the sample that is being used is not representive of the overall population. If we only used Princeton students from 1960s as our initial label, then their inherent biases would propogate through the future datasets that used it. This data can be updated over time, but that is something that researchers would have to actively think about and the inital LLMs did have biases that took time to remove. 
 
 
