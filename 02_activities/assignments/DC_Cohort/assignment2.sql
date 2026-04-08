@@ -264,17 +264,13 @@ It should use all of the columns from the product table, as well as a new column
 Name the timestamp column `snapshot_timestamp`. */
 --QUERY 9
 
-DROP TABLE IF EXISTS product_units;
+DROP TABLE IF EXISTS product_units; -- drops table in case there is an error and I need to start again
 
-CREATE TABLE product_units AS
-	SELECT*,
+CREATE TABLE product_units AS 	-- creates a table called product_units
+	SELECT*, 					-- selects all of the columns and adds the new COLUMN	
 	CURRENT_TIMESTAMP AS snapshot_timestamp
-FROM product
-WHERE product_qty_type == 'unit';
-
-
-
-
+FROM product 					-- uses product table as the base
+WHERE product_qty_type == 'unit'; -- filters it to only product qty type of unit 
 
 --END QUERY
 
@@ -283,7 +279,8 @@ WHERE product_qty_type == 'unit';
 This can be any product you desire (e.g. add another record for Apple Pie). */
 --QUERY 10
 
-
+INSERT INTO product_units 						-- inserts into the product unit TABLE
+VALUES(25,'Strawberry Rhubarb Pie','10"',3,'unit',CURRENT_TIMESTAMP); -- manually inputted values
 
 
 --END QUERY
@@ -295,8 +292,11 @@ This can be any product you desire (e.g. add another record for Apple Pie). */
 HINT: If you don't specify a WHERE clause, you are going to have a bad time.*/
 --QUERY 11
 
+-- SELECT * FROM product_units -- testing so that I can see what is going to be selected for deletion
+DELETE FROM product_units
+WHERE product_id = 25;
 
-
+SELECT * FROM product_units; -- testing to see that it is gone 
 
 --END QUERY
 
@@ -319,8 +319,19 @@ Finally, make sure you have a WHERE statement to update the right row,
 When you have all of these components, you can run the update statement. */
 --QUERY 12
 
+SELECT * FROM product_units; -- testing to see updates 
+
+ALTER TABLE product_units
+ADD current_quantity INT;
 
 
+UPDATE product_units
+SET current_quantity = ( -- last quantity  (most recent) 
+	SELECT coalesce(vi.quantity,0)
+	FROM vendor_inventory AS vi
+	WHERE vi.product_id = product_units.product_id
+	ORDER BY vi.market_date DESC
+	LIMIT 1); 
 
 --END QUERY
 
