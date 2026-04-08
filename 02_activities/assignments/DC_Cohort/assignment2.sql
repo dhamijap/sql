@@ -225,9 +225,9 @@ Before your final group by you should have the product of those two queries (x*y
 --- find total number of customers 
 DROP TABLE IF EXISTS temp.num_of_customers;
 
-CREATE TABLE temp.num_of_customters AS
+CREATE TABLE temp.num_of_customers AS
 	SELECT
-	count(customer_id)
+	count(customer_id) AS total_customer_count
 	FROM customer; 
 -- should return 26 customers 
 
@@ -248,17 +248,11 @@ JOIN product AS p
 ORDER BY v.vendor_name, p.product_name; -- should return 3 vendors, with 8 items (3, 1, 4 distinct products each) 
 
 --- now cross join the customers 
-
-
-
-
-/*
-y= 26 distinct customers 
-x1= each unique vendor has #unique_products at $price = list of unique products and their prices
-x2 = x1 * 5 =  amount of product for each vendor's inventory to be sold to each customer
-z = 26 customers * total amount that each customer would spend if they buy 5 of everything from every vendor'
-
-*/
+SELECT 
+	up.*,
+	(up.original_price * up.quantity_per_customer * nc.total_customer_count) AS possible_revenue
+FROM temp.unique_products_per_vendor AS up
+CROSS JOIN temp.num_of_customers AS nc;
 
 
 --END QUERY
@@ -269,6 +263,15 @@ This table will contain only products where the `product_qty_type = 'unit'`.
 It should use all of the columns from the product table, as well as a new column for the `CURRENT_TIMESTAMP`.  
 Name the timestamp column `snapshot_timestamp`. */
 --QUERY 9
+
+DROP TABLE IF EXISTS product_units;
+
+CREATE TABLE product_units AS
+	SELECT*,
+	CURRENT_TIMESTAMP AS snapshot_timestamp
+FROM product
+WHERE product_qty_type == 'unit';
+
 
 
 
